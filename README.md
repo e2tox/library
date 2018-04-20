@@ -1,4 +1,4 @@
-# webstack
+# E2 Library
 
 > ES6 ready for both frontend and backend. 
 
