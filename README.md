@@ -1,14 +1,10 @@
 # E2 Library
 
-> ES6 ready for both frontend and backend. 
+> ES6 ready
 
-> A full-featured Webpack setup with typescript, mongodb, hot-reload, unit testing & css extraction.
+> Test coverage friendly
 
-> Share models and interfaces between backend services and frontend components.
-
-> Integrate with Agent Framework with decorators based routing system.
-
-> Production build is ~60kb (gzipped size) smaller than official vue webpack boilerplate.
+> Minimal build
 
 ## Dependencies
 
@@ -22,7 +18,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init e2tox/library my-new-library
+$ vue-init e2tox/library my-new-library
 $ cd my-new-library
 $ npm install
 $ npm run build
@@ -44,5 +40,5 @@ $ npm run build
 You can fork this repo to create your own boilerplate, and use it with `vue-cli`:
 
 ``` bash
-vue init username/library my-library
+vue-init username/library my-library
 ```
