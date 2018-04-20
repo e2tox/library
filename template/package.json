@@ -1,0 +1,56 @@
+{
+  "name": "{{ name }}",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "description": "{{ description }}",
+  "main": "src/lib/index.ts",
+  "module": "src/lib/index.ts",
+  "typings": "src/lib/index.ts",
+  "scripts": {
+    "start": "node_modules/.bin/nodemon --config tools/testmon.json",
+    "cov": "npm run test:prepare && npm run test:coverage",
+    "debug": "node_modules/.bin/nodemon --config tools/debugmon.json",
+    "test": "npm run lint && npm run test:build && npm run test:prepare && npm run test:unit",
+    "test:debug": "TARGET=debug node_modules/.bin/ts-node --inspect-brk tools/jasmine.ts || exit 0",
+    "test:build": "node_modules/.bin/tsc -p tsconfig.release.json --noEmit",
+    "test:prepare": "rm -rf test/minimal/data",
+    "test:unit": "node_modules/.bin/ts-node tools/jasmine.ts || exit 0",
+    "test:coverage": "node_modules/.bin/ts-node node_modules/.bin/istanbul cover --config=tools/istanbul.yaml node_modules/.bin/jasmine JASMINE_CONFIG_PATH=tools/jasmine.full.json || exit 0",
+    "lint": "node_modules/.bin/standard --pretty",
+    "clean": "rm -rf .rpt2_cache coverage logs release && find ./src/ -depth -name \"*.js\"  -exec rm -f {} \\;",
+    "build": "npm run clean && npm run build:rollup && npm run build:npm",
+    "build:rollup": "node_modules/.bin/rollup -c tools/rollup.config.ts",
+    "build:npm": "cp COPYRIGHT ./release && cp README.md ./release && cp package.release.json ./release/package.json",
+    "release": "npm run build && npm run release:npm",
+    "release:npm": "cd ./release && npm publish --access public",
+    "test-on-travis": "npm run test",
+    "test-on-teamcity": "exit 1"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true
+  },
+  "author": "{{ author }}",
+  "devDependencies": {
+    "@types/jasmine": "latest",
+    "@types/node": "latest",
+    "istanbul": "next",
+    "jasmine": "latest",
+    "jasmine-spec-reporter": "latest",
+    "nodemon": "latest",
+    "prettier": "^1.12.1",
+    "rollup": "latest",
+    "rollup-plugin-babel-minify": "latest",
+    "rollup-plugin-typescript2": "latest",
+    "ts-node": "latest",
+    "typescript": "latest",
+    "typescript-standard": "latest"
+  },
+  "dependencies": {
+    "agentframework": "^0.9.10",
+    "agentstack": "^1.2.8"
+  }
+}

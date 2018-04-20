@@ -1,0 +1,9 @@
+{
+  "name": "e2-package-template",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "TypeScript, AgentFramework",
+  "devDependencies": {
+    "vue-cli": "^2.8.1"
+  }
+}

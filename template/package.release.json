@@ -1,0 +1,21 @@
+{
+  "name": "{{ name }}",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "description": "{{ description }}",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "README.md",
+    "COPYRIGHT"
+  ],
+  "author": "{{ author }}",
+  "dependencies": {
+    "agentframework": "^0.9.10",
+    "agentstack": "^1.2.8"
+  }
+}
