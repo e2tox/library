@@ -41,7 +41,7 @@
     "jasmine": "latest",
     "jasmine-spec-reporter": "latest",
     "nodemon": "latest",
-    "prettier": "^1.12.1",
+    "prettier": "latest",
     "rollup": "latest",
     "rollup-plugin-babel-minify": "latest",
     "rollup-plugin-typescript2": "latest",
@@ -51,6 +51,6 @@
   },
   "dependencies": {
     "agentframework": "^0.9.10",
-    "agentstack": "^1.2.8"
+    "agentstack": "^1.2.10"
   }
 }
