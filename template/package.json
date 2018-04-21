@@ -51,6 +51,6 @@
   },
   "dependencies": {
     "agentframework": "^0.9.10",
-    "agentstack": "^1.2.11"
+    "agentstack": "^1.2.12"
   }
 }
