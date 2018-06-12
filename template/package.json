@@ -19,8 +19,10 @@
     "test:coverage": "node -r ts-node/register node_modules/.bin/istanbul cover --config=tools/istanbul.yaml node_modules/.bin/jasmine JASMINE_CONFIG_PATH=tools/jasmine.full.json || exit 0",
     "clean": "npx ts clean",
     "lint": "npx standard --pretty",
-    "build": "npm run clean && npm run build:ts || exit 0",
+    "build": "npm run clean && npm run build:ts && npm run build:lib && npm run build:dts || exit 0",
     "build:ts": "npx ts build",
+    "build:lib": "mkdir -p ./release/lib && cp ./release/tmp/index.j ./release/tmp/index.esm.js ./release/lib",
+    "build:dts": "node_modules/.bin/dts-bundle-generator -o ./release/lib/index.d.ts ./release/tmp/index.d.ts && rm -rf ./release/tmp",
     "release": "npm run build && npm run release:npm",
     "release:npm": "cd ./release && npm publish --access public"
   },
