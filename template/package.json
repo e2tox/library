@@ -22,7 +22,7 @@
     "build": "npm run clean && npm run build:ts && npm run build:lib && npm run build:dts || exit 0",
     "build:ts": "npx ts build",
     "build:lib": "mkdir -p ./release/lib && cp ./release/tmp/index.js ./release/tmp/index.esm.js ./release/lib",
-    "build:dts": "node_modules/.bin/dts-bundle-generator -o ./release/lib/index.d.ts ./release/tmp/index.d.ts",
+    "build:dts": "node_modules/.bin/dts-bundle-generator -o ./release/lib/index.d.ts ./release/tmp/src/lib/index.d.ts",
     "release": "cd ./release && rm -rf tmp && npm publish --access public"
   },
   "prettier": {
