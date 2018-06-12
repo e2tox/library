@@ -30,11 +30,7 @@
   },
   "author": "{{ author }}",
   "devDependencies": {
-    "@types/jasmine": "latest",
-    "istanbul": "next",
-    "jasmine": "latest",
-    "jasmine-spec-reporter": "latest",
-    "prettier": "latest"
+    "@e2/cli-service": "~1"
   },
   "dependencies": {
     "agentframework": "^0.9.12",
