@@ -1,17 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "lib": [
-      "es6"
-    ],
-    "declaration": true,
+    "target": "es2017",
     "module": "commonjs",
-    "removeComments": false,
+    "declaration": false,
+    "removeComments": true,
     "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
     "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "preserveConstEnums": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
     "typeRoots": [
       "node_modules/@types/"
     ],
@@ -20,11 +25,5 @@
       "node"
     ]
   },
-  "include": [
-    "**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.d.ts"
-  ]
+  "exclude": ["node_modules"]
 }

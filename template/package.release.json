@@ -2,7 +2,7 @@
   "name": "{{ name }}",
   "version": "0.0.1",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.5.0"
   },
   "description": "{{ description }}",
   "main": "lib/index.js",
@@ -15,7 +15,7 @@
   ],
   "author": "{{ author }}",
   "dependencies": {
-    "agentframework": "^0.9.10",
-    "agentstack": "^1.2.12"
+    "agentframework": "^0.9.12",
+    "agentstack": "~1"
   }
 }
