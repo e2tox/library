@@ -30,7 +30,6 @@
   },
   "author": "{{ author }}",
   "devDependencies": {
-    "@e2/cli": "~1",
     "@types/jasmine": "latest",
     "istanbul": "next",
     "jasmine": "latest",
