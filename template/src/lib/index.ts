@@ -1,4 +1,4 @@
-import { service } from 'agentstack'
+import { service } from '@e2/core'
 
 @service()
 export class Hello {

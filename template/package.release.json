@@ -15,7 +15,7 @@
   ],
   "author": "{{ author }}",
   "dependencies": {
-    "agentframework": "^0.9.12",
-    "agentstack": "~1"
+    "agentframework": "^0.9.18",
+    "@e2/core": "~1"
   }
 }
