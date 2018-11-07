@@ -33,7 +33,6 @@
     "@e2/cli-service": "~1"
   },
   "dependencies": {
-    "@e2/core": "~1",
     "agentframework": "^0.9.18"
   }
 }

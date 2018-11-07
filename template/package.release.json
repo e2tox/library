@@ -6,7 +6,7 @@
   },
   "description": "{{ description }}",
   "main": "lib/index.js",
-  "module": "lib/index.esm.js",
+  "module": "lib/index.mjs",
   "typings": "lib/index.d.ts",
   "files": [
     "lib",
